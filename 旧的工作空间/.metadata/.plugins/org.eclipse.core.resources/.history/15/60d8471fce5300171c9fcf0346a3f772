@@ -1,0 +1,104 @@
+package com.MyProject;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+@WebServlet("/Payment")
+public class Payment extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public Payment() {
+        super();
+        
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setHeader("content-type", "text/html;charset=UTF-8");
+		PrintWriter out=response.getWriter();
+		Connection cn=null;
+		String sql="insert into payment values (?,?,?,?,?,?,?,?)";
+		try {
+			/*任何人都有权发起申请*/
+			Class.forName("com.mysql.jdbc.Driver");
+			cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/oa?characterEncoding=UTF-8","root","admin");
+			PreparedStatement pt=cn.prepareStatement(sql);
+			pt.setInt(1, 1);
+			pt.setInt(2,1);
+			pt.setInt(3,1);
+			pt.setString(4,"出差");
+			pt.setString(5, "业务应酬");
+			pt.setString(6, "北京");
+			pt.setString(7, "1");
+			pt.setString(8, "同意");
+			pt.executeUpdate();
+			out.write("<h2>报销业务申请成功!<br>");
+			
+			pt.setInt(1, 2);
+			pt.setInt(2,2);
+			pt.setInt(3,2);
+			pt.setString(4,"出差");
+			pt.setString(5, "项目开发");
+			pt.setString(6, "上海");
+			pt.setString(7, "1");
+			pt.setString(8, "同意");
+			pt.executeUpdate();
+			out.write("<h3>报销业务申请成功!<br>");
+			
+			pt.setInt(1, 3);
+			pt.setInt(2,3);
+			pt.setInt(3,2);
+			pt.setString(4,"出差");
+			pt.setString(5, "业务办理");
+			pt.setString(6, "广州");
+			pt.setString(7, "1");
+			pt.setString(8, "同意");
+			pt.executeUpdate();
+			
+			
+			
+			
+			out.write("<h4>报销业务申请成功!");
+			pt.close();
+			
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		finally
+		{
+			try {
+				cn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doGet(request, response);
+	}
+
+}

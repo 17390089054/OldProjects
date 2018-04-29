@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Mar 29 21:45:24 CST 2018
+org.eclipse.jst.jee.server\:Messages=D\:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\Messages
+org.eclipse.jst.jee.server\:Idcard=D\:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps\\Idcard

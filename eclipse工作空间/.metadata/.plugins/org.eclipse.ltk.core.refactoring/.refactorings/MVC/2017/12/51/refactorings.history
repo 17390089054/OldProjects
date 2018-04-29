@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PageBean.java&apos; to &apos;B2C电商平台/src/com.b2c.UserBean&apos;&#x0D;&#x0A;- Original project: &apos;MVC&apos;&#x0D;&#x0A;- Destination element: &apos;B2C电商平台/src/com.b2c.UserBean&apos;&#x0D;&#x0A;- Original element: &apos;com.mvc.Tools.PageBean.java&apos;" description="Copy compilation unit" destination="=B2C电商平台/src&lt;com.b2c.UserBean" element1="/src&lt;com.mvc.Tools{PageBean.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1513774759129" units="1" version="1.0"/>
+</session>

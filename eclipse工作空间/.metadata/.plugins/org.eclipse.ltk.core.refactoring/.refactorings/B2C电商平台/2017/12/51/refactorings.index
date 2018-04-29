@@ -1,0 +1,11 @@
+1513688918967	Delete element
+1513693691178	Rename type 'LoginServlet'
+1513696937726	Rename resource 'User'
+1513696941449	Move 'List.jsp' to 'user'
+1513747997119	Delete element
+1513748002757	Rename resource 'index2.jsp'
+1513750625487	Rename type 'UserService'
+1513751899243	Rename type 'List'
+1513871826738	Move compilation unit
+1514041919362	Move compilation unit
+1514041941152	Rename package 'com.b2c.UserBean'

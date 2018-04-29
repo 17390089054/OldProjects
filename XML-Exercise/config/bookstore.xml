@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	1.0 获取bookstore下book属性category值为web下的第二个的title的文本内容
+	bookstore->book[@category='web'][2]->title
+	xPath路径:/bookstore/book[@category='web'][2]/title/text()
+	
+	2.0 获取bookstore下book属性category值为web下的title属性lang为en的文本内容
+	bookstore->book[@category='web']->title[@lang='en']
+	xpath路径：/bookstore/book[@category='web']/title[@lang='en']/text()
+	
+	3.0 获取bookstore下book属性category值为cooking下的title的lang属性值
+	bookstore->book[@category='cooking']->title->@lang
+	xPath路径:/bookstore/book[@category='cooking']/title/@lang
+	
+	4.0 获取bookstore下的所有book节点集合
+	Xpath路径:/bookstore/book		
+ -->
+<bookstore>
+	<book category="children">
+		<title lang="en">JavaScript语言精粹</title>
+		<author>Douglas Crockford</author>
+		<year>2009</year>
+		<price>49.00</price>
+	</book>
+	<book category="cooking">
+		<title lang="en">java虚拟机规范</title>
+		<author>Tim Lindholm</author>
+		<year>2015</year>
+		<price>79.00</price>
+	</book>
+	<book category="web">
+		<title lang="en">数据结构（C++语言版）</title>
+		<author>邓俊辉</author>
+		<year>2011</year>
+		<price>39.00</price>
+	</book>
+	<book category="web">
+		<title lang="uk">Linux指令从入门到精通</title>
+		<author>宋磊</author>
+		<year>2014</year>
+		<price>69.00</price>
+	</book>
+	
+
+
+</bookstore>

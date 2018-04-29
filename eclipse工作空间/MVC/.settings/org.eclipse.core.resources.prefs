@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/com/mvc/Filter/EncodingFilter.java=gbk
+encoding//src/com/mvc/Service/RegisterService.java=UTF-8
+encoding//src/com/mvc/Service/UserService.java=GBK

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;trans&apos; from expression &apos;trans(text,from,to)&apos;&#x0D;&#x0A;- Original project: &apos;translate&apos;&#x0D;&#x0A;- Variable name: &apos;trans&apos;&#x0D;&#x0A;- Destination method: &apos;com.wrf.Translate.Translate.doPost()&apos;&#x0D;&#x0A;- Variable expression: &apos;trans(text,from,to)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;trans&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.wrf.Translate{Translate.java" name="trans" replace="true" selection="1177 22" stamp="1509255293023" version="1.0"/>
+</session>

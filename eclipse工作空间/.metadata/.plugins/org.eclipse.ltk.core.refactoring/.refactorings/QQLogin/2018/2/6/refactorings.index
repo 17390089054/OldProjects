@@ -1,0 +1,63 @@
+1517969725897	Delete element
+1517971162072	Move file
+1517971315729	Delete element
+1517971320025	Delete element
+1517971335500	Rename package 'com.wrf.QQLogin.Controller'
+1517971424833	Rename package 'com.wrf.QQLogin.sservices'
+1517971433466	Rename package 'com.wrf.QQLogin.util'
+1517971445078	Rename package 'com.wrf.QQLogin.controller'
+1517971450523	Rename package 'com.wrf.QQLogin.dao'
+1517971476883	Delete element
+1517971487176	Delete element
+1517971491391	Delete element
+1517971495576	Delete element
+1517971638385	Delete element
+1517971644904	Rename package 'com.wrf.QQLogin.test'
+1517971921832	Delete element
+1517971942979	Delete element
+1517971958660	Delete element
+1517971970339	Delete element
+1517971974157	Copy package
+1517971997682	Delete element
+1517972002125	Delete element
+1517972045940	Delete element
+1517972050930	Delete element
+1517972148261	Delete element
+1517972152396	Delete element
+1517972155967	Delete element
+1517972159875	Delete element
+1517972196326	Delete element
+1517972221147	Delete element
+1517972228545	Rename package 'com.wrf.qqLogin.Controller'
+1517972249578	Rename package 'com.wrf.qqLogin.Controller'
+1517972390779	Rename package 'com.wrf.qqLogin.Controler'
+1517972406273	Delete element
+1517972429912	Move compilation unit
+1517986568655	Extract local variable 'accessTokenByRequest'
+1517986648627	Extract local variable 'accessToken'
+1517986988782	Delete element
+1517987236865	Extract local variable 'userOpenID'
+1517987453005	Extract local variable 'userInfo'
+1517987477549	Extract local variable 'gender'
+1517987509295	Extract local variable 'nickname'
+1517987560190	Extract local variable 'avatar'
+1517987647038	Extract local variable 'level'
+1517987685787	Extract local variable 'ret'
+1517987713142	Extract local variable 'msg'
+1517988024417	Extract local variable 'avatarURL100'
+1517997678395	Delete element
+1517999285751	Rename resource 'db.propotities'
+1517999759304	Extract local variable 'inStream'
+1518000211281	Copy file
+1518000216253	Delete element
+1518000494426	Delete element
+1518000618349	Copy file
+1518000623633	Delete element
+1518001804680	Extract local variable 'prepareStatement'
+1518002301684	Extract local variable 'raw'
+1518002755250	Extract local variable 'rs'
+1518002829318	Extract local variable 'data'
+1518002844951	Extract local variable 'columnCount'
+1518002999981	Extract local variable 'Name'
+1518003476707	Extract local variable 'apply_id'
+1518004009549	Extract local variable 'list'

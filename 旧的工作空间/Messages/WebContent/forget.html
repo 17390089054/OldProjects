@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{width: 100%;height: 100vh;font-family: "微软雅黑";overflow: hidden;}
+			#center{width: 280px;height: ;margin: 200px auto 0;}
+			#f_phone{position: relative;}
+			#getMessage{position: absolute;top: 5px;right: 10px;width: 100px;height: 30px;background: rgba(255,255,255,.5);text-align: center;line-height: 30px;cursor: pointer;font-size: 16px;color: #333;user-select: none;}
+			#getMessage:hover{background: rgba(255,255,255,.8);}
+			#getMessage:active{background: rgba(0,0,0,.5);color: #fff;}
+			#phone,#message,#password1,#password2{width: 280px;height: 40px;text-indent: 16px;color: #fff;background: rgba(3,3,3,.3);outline: none;border: 1px solid rgba(33,33,33,.2);}
+			#phone,#password1,#password2{border-bottom: none;}
+			#message,#password1,#password2{border-top: 1px solid rgba(0,0,0,.4);}
+			#btn{margin-top: 30px;width: 280px;height: 40px;text-align: center;line-height: 40px;color: #FFFFFF;background: rgba(3,3,3,.5);transition: .3s;cursor: pointer;}
+			#btn:hover{background: #333;}
+			#center p{margin-top: 10px;overflow: hidden;}
+			#center a{text-decoration: none;color: #fff;font-size: 14px;}
+			#center a i{font-size: 14px;margin-right: 4px;}
+			#center .register{float: left;margin-left: 10px;}
+			#center .forget{float: right;margin-right: 10px;}
+		</style>
+	</head>
+	<body>
+		
+		<div id="center">
+			<form action="forget" method="post">
+				<div id="f_phone" class="animated bounceInLeft" >
+					<input type="text" name="phone" id="phone" placeholder="请输入手机号" />
+					<div id="getMessage" onclick="getMessage()">获取验证码</div>
+				</div>
+				<input type="text" name="message" id="message" class="animated bounceInRight" placeholder="请输入手机六位短信验证码" />
+				<input type="password" name="password1" id="password1" class="animated bounceInRight" placeholder="请输入新密码" />
+				<input type="password" name="password2" id="password2" class="animated bounceInLeft" placeholder="请再次输入密码" />
+				<div id="btn" class="animated rollIn" onclick="forget()">修改密码</div>
+			</form>
+			<p class="animated bounceInUp">
+				<a href="register.html" class="register"><i class="iconfont icon-icoreg"></i>注册</a>
+				<a href="login.html"class="forget"><i class="iconfont icon-login"></i>登录</a>
+			</p>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/bg.js"></script>
+		<script type="text/javascript">
+			var mCode = "";
+			function getMessage(){
+				var phone = $("#phone").val();
+				if(phone==""||phone==null){
+					alert("请输入您的手机号码！");
+					$("#phone").focus();
+					
+				}else if(!isPhone(phone)){
+						alert("您输入的手机号码格式不正确！");
+						$("#phone").select();
+				}else{
+					$.ajax({
+						type:"post",
+						url:"getMessageCode",
+						data:{"phone":phone},
+						success:function(data){
+							if(data=="error"){
+								alert("验证码获取失败！");
+							}else{
+								mCode = data;
+							}
+						}
+					});
+				}
+			}
+		
+			$(document).keydown(function(event){
+				if(event.keyCode==13){
+					forget();
+				}
+			});
+			
+			// 判断手机号格式是否正确
+			function isPhone(phone){
+				var pattern = /^1[34578]\d{9}$/;
+				return pattern.test(phone);
+			}
+		
+			function forget(){
+				var phone = $("#phone").val();
+				var password1 = $("#password1").val();
+				var password2 = $("#password2").val();
+				var message = $("#message").val();
+				if(phone==""||phone==null){
+					alert("请输入您的手机号码！");
+					$("#phone").focus();
+					
+				}else if(!isPhone(phone)){
+						alert("您输入的手机号码格式不正确！");
+						$("#phone").select();
+				}else if(message==""||message==null){
+					alert("请输入手机验证码！");
+					$("#message").focus();
+				}else if(message!=mCode){
+					alert("手机验证码错误！");
+					$("#message").select();
+				}else if(password1==""||password1==null){
+					alert("请输入密码！");
+					$("#password1").focus();
+				}else if(password2==""||password2==null){
+					alert("请再次输入密码！");
+					$("#password2").focus();
+				}else if(password1!=password2){
+					alert("两次输入的密码不一致！");
+					$("#password2").select();
+				}else{
+					$.ajax({
+						type:"post",
+						url:"forget",
+						data:{"phone":phone,"password":password1},
+						success:function(data){
+							if(data=="success"){
+								window.location.href="login.html";
+							}else{
+								alert("修改密码失败！");
+								$("#phone").val("");
+								$("#password1").val("");
+								$("#password2").val("");
+								$("#message").val("");
+							}
+						}
+					});
+				}
+			}
+		</script>
+	</body>
+</html>

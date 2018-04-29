@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<database-info>
+		<driver-name>com.mysql.jdbc.Driver</driver-name>
+		<url>jdbc:mysql://192.168.1.1:8080/oa</url>
+		<user>root</user>
+		<password>123456</password>	
+	</database-info>
+</config>

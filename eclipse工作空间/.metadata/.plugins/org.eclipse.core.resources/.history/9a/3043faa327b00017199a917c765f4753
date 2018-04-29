@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户列表</title>
+</head>
+<body>
+<h1 style="color:purple;font-size:20px;margin-left:700px;">用户列表</h1>
+<table border="1 " bordercolor="purple" width="500px" height="100px"  style="text-align:center" align="center">
+
+<tr>
+<td>序号</td>
+<td>姓名</td>
+<td>年龄</td>
+<td>时间</td>
+</tr>
+<c:forEach items="${list}" var="v" varStatus="vs">
+<tr>
+<td>${vs.count}</td>
+<td>${v.name}</td>
+<td>${v.age}</td>
+<td><fmt:formatDate value=" ${v.date}" pattern="yyyy年MM月dd日 HH:mm:ss"></fmt:formatDate></td>
+</tr>
+</c:forEach>
+
+
+</table>
+</body>
+</html>

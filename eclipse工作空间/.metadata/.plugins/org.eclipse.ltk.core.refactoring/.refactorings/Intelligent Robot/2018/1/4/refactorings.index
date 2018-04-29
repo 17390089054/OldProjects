@@ -1,0 +1,4 @@
+1516624472623	Rename resource 'NewFile.jsp'
+1516626576486	Extract local variable 'connection'
+1516626732462	Extract local variable 'inputStream'
+1516634382044	Delete element

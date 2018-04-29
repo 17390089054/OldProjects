@@ -1,0 +1,5 @@
+1519040780733	Rename resource 'NewFile.jsp'
+1519040820245	Rename package 'com.wrf.mail'
+1519042010224	Extract local variable 'userName'
+1519042046709	Extract local variable 'title'
+1519042072005	Extract local variable 'content'

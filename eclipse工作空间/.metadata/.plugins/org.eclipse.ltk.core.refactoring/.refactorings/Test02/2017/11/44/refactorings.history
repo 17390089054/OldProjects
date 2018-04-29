@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SessionFilter.java&apos; to &apos;MVC/src/com.mvc.Filter&apos;&#x0D;&#x0A;- Original project: &apos;Test02&apos;&#x0D;&#x0A;- Destination element: &apos;MVC/src/com.mvc.Filter&apos;&#x0D;&#x0A;- Original element: &apos;com.wrf.Filter.SessionFilter.java&apos;" description="Copy compilation unit" destination="=MVC/src&lt;com.mvc.Filter" element1="/src&lt;com.wrf.Filter{SessionFilter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1509588607988" units="1" version="1.0"/>
+</session>

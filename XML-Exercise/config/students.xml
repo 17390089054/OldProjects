@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<name>花花</name>
+		<colleage>长春理工大学</colleage>
+		<major>计算机科学与技术</major>
+		<url>北京市朝阳区</url>
+	</student>
+
+	<student>
+		<name>宁宁</name>
+		<colleage>对外经贸大学</colleage>
+		<url>长春市朝阳区</url>
+	</student>
+	
+	<student>
+		<name>天天</name>
+		<colleage>成都理工大学</colleage>
+		<url>四川省成都市</url>
+	</student>
+
+
+
+</students>

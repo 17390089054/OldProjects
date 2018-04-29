@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.mvc.Filter&apos; to &apos;B2C电商平台/src&apos;&#x0D;&#x0A;- Original project: &apos;MVC&apos;&#x0D;&#x0A;- Destination element: &apos;B2C电商平台/src&apos;&#x0D;&#x0A;- Original element: &apos;MVC/src/com.mvc.Filter&apos;" description="Copy package" destination="=B2C电商平台/src" element1="/src&lt;com.mvc.Filter" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1514219024631" version="1.0"/>
+</session>
