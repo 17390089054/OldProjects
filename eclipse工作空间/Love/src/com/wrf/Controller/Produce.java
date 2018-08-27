@@ -29,14 +29,14 @@ public class Produce extends HttpServlet{
 			//接收前台参数
 			String text = req.getParameter("text");
 			//清除上一次的缓存
-			deleteFile("resource/result/result.png");
+			deleteFile("resource"+File.separator+"result"+File.separator+"result.png");
 			//生成二维码
 			String path=getPath(req);
 			QrcodeUtil.QrcodeImg(text,path);
 			//操作成功返回二维码图片地址
 			Map<String, Object>map=new HashMap<String,Object>();
 			map.put("flag", true);
-			map.put("path", "resource/result/result.png");
+			map.put("path", "resource"+File.separator+"result"+File.separator+"result.png");
 			//转换为json
 			Gson gson=new Gson();
 			String result=gson.toJson(map);				
@@ -48,7 +48,7 @@ public class Produce extends HttpServlet{
 	}
 	public String getPath(HttpServletRequest req){
 		String path="";
-		path=req.getServletContext().getRealPath("\\resource\\result\\result.png");
+		path=req.getServletContext().getRealPath("resource"+File.separator+"result"+File.separator+"result.png");
 		return path;
 	}
 	/** 清除缓存文件
